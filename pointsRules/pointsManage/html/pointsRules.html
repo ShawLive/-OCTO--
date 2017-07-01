@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link href="../../public/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/pointsRules.css" rel="stylesheet">
+    <title>积分管理-积分规则</title>
+</head>
+<body>
+    <!--积分规则-->
+    <div id="pointsRules" class="points-rules">
+        <!--工具盒容器-->
+        <div class="toolbox-container">
+            <!--搜索区域-->
+            <div class="search-area">
+                <div class="rules-name">
+                    <span>规则名称</span>
+                    <input id="rulesName" type="text" placeholder="请输入规则名称"/>
+                </div>
+                <div class="rules-type">
+                    <span>规则类型</span>
+                    <input id="rulesType" type="text" placeholder="请选择规则类型" data-toggle="dropdown" readonly/>
+                </div>
+                <span id="btnSearch" class="btn-search">搜索</span>
+            </div>
+            <!--创建新规则-->
+            <div class="create-new-rules">
+                <button id="newRules">新建规则</button>
+            </div>
+
+        </div>
+        <!--表容器-->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>操作</th>
+                        <th>规则名称</th>
+                        <th>规则类型</th>
+                        <th>计算方式</th>
+                        <th>计算系数</th>
+                        <th>每日上限</th>
+                        <th>总上限</th>
+                        <th>有效期</th>
+                        <th>处理时间</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <!--页面容器-->
+        <div class="page-container">
+            <ul id="pageList" class="page-list">
+                <li class="pre-page"> &lt;上一页</li>
+                <li class="page-num active">1</li>
+                <li class="page-num">2</li>
+                <li class="page-num">3</li>
+                <li class="page-num">4</li>
+                <li class="page-num">5</li>
+                <li class="next-page">下一页&gt;</li>
+            </ul>
+        </div>
+        <!--规则类型列表-->
+        <ul id="rulesTypeList" class="rules-type-list">
+            <li class="type-item">获取</li>
+            <li class="type-item">使用</li>
+        </ul>
+
+    </div>
+
+</body>
+<script src="../../public/js/jquery.js"></script>
+<script src="../js/pointsRules.js"></script>
+</html>
